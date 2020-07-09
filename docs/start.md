@@ -6,7 +6,7 @@ title: 快速开始
 
 ## 基本介绍
 
-KwaiRN 是基于 reactjs 跨平台高性能 UI 框架
+KwaiRN 是基于 ReactJs 跨平台高性能 UI 框架
 
 + [在线 HelloWorld（CodeSandBox）](https://codesandbox.io/s/awesome-shadow-upt2g?file=/src/App.js)
 	

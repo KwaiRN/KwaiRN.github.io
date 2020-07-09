@@ -12,10 +12,10 @@ install:
   - npm install  #安装hexo及插件
 
 script:
-  - git config --global user.name "${GH_AUTHOR}"
+  - git config --global user.name "${GH_NAME}"
   - git config --global user.email "${GH_EMAIL}"
   - echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-  - cd website && npm install && yarn run publish-gh-pages
+  - yarn && GIT_USER="${GH_NAME}" yarn deploy
   # - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages:master
 
 

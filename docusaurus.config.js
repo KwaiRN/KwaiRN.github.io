@@ -1,11 +1,11 @@
 module.exports = {
   title: 'KRN 文档',
   tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://kwairn.github.io/',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Kwairn', // Usually your GitHub org/user name.
+  projectName: 'kwairn.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'KRN 文档',
