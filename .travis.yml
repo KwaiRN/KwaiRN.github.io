@@ -26,4 +26,4 @@ branches:
 
 env:
  global:
-   - GH_REF: github.com/VideoNative/VideoNative.github.io.git  #设置GH_REF，注意更改yourname
+   - GH_REF: github.com/KwaiRN/krn.github.io.git  #设置GH_REF，注意更改yourname
