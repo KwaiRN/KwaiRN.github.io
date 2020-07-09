@@ -117,27 +117,27 @@ npx react-native start
 
 PC 的命令行输入 'd'，终端会弹出调试面板
 
-![](../static/img/android_debug1.png)
+![](../img/android_debug1.png)
 
 终端点击 "Debug"，PC Chrome 会弹出调试页
 
-![](../static/img/android_debug2.png)
+![](../img/android_debug2.png)
 
 在调试页中右键，点击 "检查" 或 "Inspect"，即弹出调试工具 devtools。调试方式与网页调试一致。
 
-![](../static/img/android_debug3.png)
+![](../img/android_debug3.png)
 
 #### iOS
 
 1. iOS 在 Beta/Debug 版本可以通过摇一摇进入 RN 相关的调试页面，如下图
 
-![](../static/img/iOS_debug.png)
+![](../img/iOS_debug.png)
 
 2. 首先要确认【是否拉取指定服务器】开关，如果关闭则读取的是本地内置的 JSBundle；如果打开则可以与电脑进行联调（电脑需要开启服务器)，一般输入 IP 地址即可，其他配置保持默认
 
 3. 点击【更多】->【Debug】，就可以在 Chrome 上看到调试页面。注意这些配置需要重启生效，同时会持久化到本地，不需要每次都设置。
 
-![](../static/img/iOS_debug2.png)
+![](../img/iOS_debug2.png)
 
 
 [更多调试资料请点我](https://reactnative.dev/docs/debugging)

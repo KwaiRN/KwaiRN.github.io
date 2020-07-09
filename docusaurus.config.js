@@ -20,9 +20,8 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/KwaiRN/KwaiRN.github.io',
           label: 'GitHub',
           position: 'right',
         },
@@ -70,7 +69,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/KwaiRN/KwaiRN.github.io',
             },
           ],
         },

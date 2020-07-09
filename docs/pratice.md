@@ -74,11 +74,11 @@ react-native-video
 ### 如何判断组件是否需要 Native 支持
 + 运行时错误包含以下堆栈
 
-![](../static/img/miss_native.png)
+![](../img/miss_native.png)
 
 + README.md 说明包含 native 库，需要执行 react-native link 命令。或者 package.json 包括以下内容
 
-![](../static/img/miss_native2.png)
+![](../img/miss_native2.png)
 
 ### 怎么找三方库
 建议使用时留意 issue，三方库的质量

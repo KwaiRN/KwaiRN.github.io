@@ -1,4 +1,4 @@
-# 更新文档方法
+## 更新文档方法
 
 1. **切换到 source 分支**
 
@@ -16,3 +16,18 @@ sh GitPush.sh "Your Commit Message"
 ```
 
 4. 等待远程构建完毕（大约 1 分钟），查看官网是否部署成功
+
+## 本地调试
+1. **切换到 source 分支**
+
+```sh
+git checkout source
+```
+
+2. 修改你的文件
+
+3. 本地预览，打开[本地服务器](http://localhost:3000/)
+
+```sh
+npm start
+```
