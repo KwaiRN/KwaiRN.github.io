@@ -30,3 +30,20 @@ title: 开发备忘
 2. iOS 上 Statusbar 
 
 ## WebLogger
+
+## 运行 Native Demo
++ Android
+
+```js
+npx react-native init MyReactNativeApp --version 0.62.2
+npm install 各种 native 插件
+npx kia-cli run-android //第一次执行会提示输入 Android 环境的安装目录，以后则不用。
+```
+
++ iOS
+
+待补充
+
+```js
+
+```
