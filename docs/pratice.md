@@ -86,3 +86,26 @@ react-native-video
 + [官方库商店](https://reactnative.directory/)：经过筛选，有评分，但是数据更新落后，例如 issue 数量貌似不是很新
 + [npm 商店](https://www.npmjs.com/)：数据新，数量多，但是质量参差不齐
 + [npmtrends](https://www.npmtrends.com/)：对比同类型库下载数、issue、star，选型非常有用
+
+
+## 开发经验
+### 沉浸式视频的内存优化
+开发上热门业务时，沉浸式视频列表使用的是 RN 自带的 List 组件，该组件在 Native 上是使用 scrollView 实现的，假如我们有 30 个视频数据，那么首次渲染的时候就会把这 30 个视频同时渲染出来，这样会导致内存暴涨。
+
+![](../img/popular_example.png)
+
+一种可行的优化方法是根据 index 进行选择性渲染，这里的一个小技巧是对于视频，渲染当前视频的前后 1 个；对于海报图，渲染当前视频的前 2 个和后 8 个（而不是前后 5 个），以此保证用户不断往下翻视频的流畅体验
+
+```js
+render() {
+	const showVideo = Math.abs(this.props.index - this.props.activeIndex) <= 1;
+	const showImage = this.props.index <= this.props.activeIndex + 8 && this.props.index >= this.props.activeIndex - 2;
+	{showVideo ? <Video></Video>}
+	{showImage ? <Image></Image>}
+}
+```
+
+
+
+
+
