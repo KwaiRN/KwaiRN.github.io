@@ -5,7 +5,7 @@ if [ $# -gt 0 ] ; then
 	commitMessage=$*" [by ${who}]"
 fi
 
-git pull --rebase
 git add .
 git commit -m "$commitMessage"
+git pull --rebase
 git push
