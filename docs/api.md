@@ -64,6 +64,15 @@ NativeModules.Kwaiying.getInfoFromKwaiYing((res) => {
 })
 ```
 
+返回值参数说明
+
+|  参数   | 类型 | 说明 |
+|  ----  | ----  | ---- |
+| did  | string | 设备 ID |
+| kiaVersion  | string | KRN 框架的版本号 |
+| appVersion  | string | app 的版本号（*Android 和 iOS 不一定一样*） |
+
+
 ### getCommonCookies
 ```js
 NativeModules.Kwaiying.getCommonCookies((res) => { 
@@ -72,6 +81,18 @@ NativeModules.Kwaiying.getCommonCookies((res) => {
 ```
 
 > 注意：用户没登录，则 userId/passToken/ky.api_st 不存在
+
+返回值参数说明，以下是 iOS 和 android 平台的交集参数
+
+|  参数   | 类型 | 说明 |
+|  ----  | ----  | ---- |
+| did  | string | 设备 ID |
+| sid  | string | "ky.api" |
+| userId  | string | 用户 ID |
+| ky.api_st  | string | 未知 |
+| sys  | string | 系统版本 |
+| passToken  | string | 设备 ID |
+
 
 
 ## 上报
