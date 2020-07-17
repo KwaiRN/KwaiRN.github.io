@@ -10,7 +10,7 @@ title: API
 ### KRN 跳 Native
 
 ```js
-NativeModules.kwaiying.open(url, callback)
+NativeModules.Kwaiying.open(url, callback)
 ```
 
 + 跳相册页
@@ -136,6 +136,20 @@ weblog.sendImmediately('PROTO', {
 ```js
 NativeModules.Kwaiying.setNavSwipe(bool enable);
 ```
+
+### 获取当前环境配置
+
+使用该接口，JS 可以根据 Native 的环境配置来请求后台不同的接口
+
+```js
+NativeModules.Kwaiying.getEnv((mode) => { 
+
+})
+```
+
+mode: 0 表示测试环境；1 表示预发布环境；2 表示正式环境
+
+如果是 release 版本的 App，则直接返回 2
 
 
 ## 参考资料
