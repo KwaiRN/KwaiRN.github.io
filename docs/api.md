@@ -69,7 +69,7 @@ NativeModules.Kwaiying.getInfoFromKwaiYing((res) => {
 |  参数   | 类型 | 说明 |
 |  ----  | ----  | ---- |
 | did  | string | 设备 ID |
-| kiaVersion  | string | KRN 框架的版本号 |
+| krnVersion  | string | KRN 框架的版本号 |
 | appVersion  | string | app 的版本号（*Android 和 iOS 不一定一样*） |
 
 
