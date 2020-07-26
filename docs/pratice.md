@@ -74,11 +74,11 @@ react-native-video
 ### 如何判断组件是否需要 Native 支持
 + 运行时错误包含以下堆栈
 
-![](../img/miss_native.png)
+![](../static/img/miss_native.png)
 
 + README.md 说明包含 native 库，需要执行 react-native link 命令。或者 package.json 包括以下内容
 
-![](../img/miss_native2.png)
+![](../static/img/miss_native2.png)
 
 ### 怎么找三方库
 建议使用时留意 issue，三方库的质量
@@ -92,7 +92,7 @@ react-native-video
 ### 沉浸式视频的内存优化
 开发上热门业务时，沉浸式视频列表使用的是 RN 自带的 List 组件，该组件在 Native 上是使用 scrollView 实现的，假如我们有 30 个视频数据，那么首次渲染的时候就会把这 30 个视频同时渲染出来，这样会导致内存暴涨。
 
-![](../img/popular_example.png)
+![](../static/img/popular_example.png)
 
 一种可行的优化方法是根据 index 进行选择性渲染，这里的一个小技巧是对于视频，渲染当前视频的前后 1 个；对于海报图，渲染当前视频的前 2 个和后 8 个（而不是前后 5 个），以此保证用户不断往下翻视频的流畅体验
 
