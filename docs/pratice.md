@@ -55,7 +55,9 @@ JS 工程推荐使用 [VSCode 的 ESLint 插件](https://marketplace.visualstudi
 "react-native-video": "^5.0.2",
 "@react-native-community/netinfo": "^5.9.3",
 "react-native-create-thumbnail": "^1.2.1",
-"react-native-fs": "^2.16.6"
+"react-native-fs": "^2.16.6",
+"react-native-zip-archive": "^5.0.4",
+"rn-fetch-blob": "^0.12.0",
 ```
 
 ### 已接入的 Native 组件列表
