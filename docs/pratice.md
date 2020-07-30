@@ -40,38 +40,6 @@ JS 工程推荐使用 [VSCode 的 ESLint 插件](https://marketplace.visualstudi
 ## 第三方组件
 纯 JS 库可以直接集成，注意包大小即可。部分三方库会包含 native 实现，重新打终端包。目前 KRN 内置以下 native module，如果需要集成新的 native 库**联系终端开发**重新打包
 
-### 常用的纯 JS 组件列表
-
-```json
-"@react-native-community/masked-view": "^0.1.10",
-"@react-native-community/slider": "^3.0.0",
-"react": "16.11.0",
-"react-native": "0.62.2",
-"react-native-gesture-handler": "^1.6.1",
-"react-native-linear-gradient": "^2.5.6",
-"react-native-reanimated": "^1.9.0",
-"react-native-safe-area-context": "^3.0.5",
-"react-native-screens": "^2.8.0",
-"react-native-video": "^5.0.2",
-"@react-native-community/netinfo": "^5.9.3",
-"react-native-create-thumbnail": "^1.2.1",
-"react-native-fs": "^2.16.6",
-"react-native-zip-archive": "^5.0.4",
-"rn-fetch-blob": "^0.12.0",
-```
-
-### 已接入的 Native 组件列表
-引入 Native 组件列表会增大安装包大小，因此需要谨慎添加，请确保你要新增的 Native 组件的功能不会与以下已有的组件重复
-
-```json
-react-native-cookies
-react-native-safe-area-context
-react-native-slider	
-react-native-video
-```
-
-[iOS 最新的实时组件列表请参见这里](http://git.corp.kuaishou.com/chenying09/kwai_react_native_ios/-/tree/master/release_libraries)
-
 
 ### 如何判断组件是否需要 Native 支持
 + 运行时错误包含以下堆栈
