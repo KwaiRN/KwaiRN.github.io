@@ -70,7 +70,7 @@ Toast 组件
 ### react-native-safe-area-context
 安全区，随 @react-navigation/native 一起引入
 
-### RNReanimated
+### react-native-reanimated
 动画相关，随 @react-navigation/native 一起引入
 
 ### rn-fetch-blob
