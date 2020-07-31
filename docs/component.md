@@ -57,6 +57,8 @@ Toast 组件
 文件操作，如：文件读、写、上传、下载、删除等
 > android的上传/下载进度是模拟出来的，且不支持取消上传任务，建议使用`rn-fetch-blob`
 
+> 注意：该三方库有坑，上传视频时会导致内存上涨不释放，已修复，详情点击 [react-native-fs](http://git.corp.kuaishou.com/team-shenzhen/ios/react-native-fs/-/tree/master)
+
 ### @react-native-community/netinfo
 获取当前的网络状态
 
