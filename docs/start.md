@@ -84,17 +84,29 @@ nrm use ks
 
 
 ## 快速运行
-### 1. 创建 JS 工程
 
+[krn-cli](http://git.corp.kuaishou.com/kuaiying-frontend/rn-projects/krn-cli)是基于react-native cli封装的脚手架，能够快速创建工程。
+
+### 安装
 ```sh
-npx react-native init MyReactNativeApp --version 0.62.2
-cd MyReactNativeApp
+npm i krn-cli -g
+```
+
+### 创建工程
+```sh
+krn init demo
+```
+> 以下功能暂未实现: 
+```sh
+krn run-ios
+krn run-android
+krn pack
 ```
 
 ### 2. 启动 JS 工程
 
 ```sh
-npx react-native start
+npm start
 ```
 
 ### 3. 安装快影调试包

@@ -32,6 +32,7 @@ Toast 组件
 
 ### react-native-progress-circle
 圆形进度条
+> ios和android的borderWidth大小不一致
 
 ## Native 组件
 引入 Native 组件列表会增大安装包大小，因此需要谨慎添加，请确保你要新增的 Native 组件的功能不会与以下已有的组件重复
@@ -43,6 +44,8 @@ Toast 组件
 
 ### react-native-video
 视频组件
+> 需要自己实现进度条  
+> TODO: 封装`@krn/react-native-video`组件，可以把slider塞进去
 
 ### react-native-linear-gradient
 
@@ -52,6 +55,7 @@ Toast 组件
 
 ### react-native-fs
 文件操作，如：文件读、写、上传、下载、删除等
+> android的上传/下载进度是模拟出来的，且不支持取消上传任务，建议使用`rn-fetch-blob`
 
 ### @react-native-community/netinfo
 获取当前的网络状态
@@ -63,6 +67,7 @@ Toast 组件
 
 ### react-native-create-thumbnail
 获取视频第 n 毫秒的缩略图
+> 需做好缓存，长列表下不建议使用该组件
 
 ### react-native-gesture-handler
 手势相关，随 @react-navigation/native 一起引入
@@ -81,6 +86,10 @@ Toast 组件
 
 ### react-native-blur
 遮罩、蒙版效果
+> ios 建议使用shouldRasterizeIOS复用位图，否则滑动时，会出现闪烁问题
+
+### react-native-smooth-pull-to-refresh
+下拉刷新，纯JS组件，性能没有native好，但ios与android均支持下拉loading样式设置。
 
 
 
