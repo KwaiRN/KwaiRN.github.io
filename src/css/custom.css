@@ -24,6 +24,6 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-img {
+.markdown > p > img {
   width: 30%;
 }
