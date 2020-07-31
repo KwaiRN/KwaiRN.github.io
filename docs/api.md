@@ -71,6 +71,7 @@ NativeModules.Kwaiying.getInfoFromKwaiYing((res) => {
 | did  | string | 设备 ID |
 | krnVersion  | string | KRN 框架的版本号 |
 | appVersion  | string | app 的版本号（*Android 和 iOS 不一定一样*） |
+| totalMemory  | string | 设备总内存(以Byte为单位) |
 
 
 ### getCommonCookies
