@@ -27,6 +27,12 @@ module.exports = {
           position: 'left',
         },
         {
+          to: 'components/',
+          href: `https://kwairn.github.io/components/index.html`,
+          label: 'Components',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/KwaiRN/KwaiRN.github.io',
           label: 'GitHub',
           position: 'right',
@@ -92,8 +98,7 @@ module.exports = {
           homePageId: 'start',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/KwaiRN/KwaiRN.github.io/edit/source/',
+          editUrl: 'https://github.com/KwaiRN/KwaiRN.github.io/edit/source/',
         },
         blog: {
           showReadingTime: true,
