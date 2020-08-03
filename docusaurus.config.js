@@ -28,7 +28,7 @@ module.exports = {
         },
         {
           to: 'components/',
-          href: `https://kwairn.github.io/components/index.html`,
+          href: `https://kwairn.github.io/pages/components/`,
           label: 'Components',
           position: 'left',
         },
