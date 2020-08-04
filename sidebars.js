@@ -8,12 +8,12 @@ module.exports = {
     {
       type: 'category',
       label: 'API',
-      items: ['api', 'component'],
+      items: ['api', 'kwai_api', 'component'],
     },
     {
       type: 'category',
       label: '其他',
-      items: ['performance', 'vs', 'test', 'pratice', 'note'],
+      items: ['vs', 'pratice', 'note'],
     },
   ]
 };
