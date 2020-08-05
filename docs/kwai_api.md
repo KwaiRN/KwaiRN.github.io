@@ -146,7 +146,7 @@ const weblog = new RNWeblog(
 proto 上报方式。RecoReportEvent.proto 需要业务引入。可以查阅参考资料。
 
 ```js
-weblog.sendImmediately('PROTO', {
+weblog.send('PROTO', {
     type: 'reco_report_event',
     payload: RecoReportEvent.SerializeAsString(),
     eventId: 'aaaabbb',
