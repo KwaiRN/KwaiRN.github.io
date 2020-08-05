@@ -5,84 +5,74 @@ title: 数据存储
 
 > **storage 的 value 值暂时不支持 Object 类型，待补充**
 
-## krn.storage.setStorage(Object obj)
+## KRNStorage.set(table, key, value, callback)
 
 **参数说明**
 
 | 参数 | 类型 | 必填 | 说明
 | ---- | ---- | ---- | ---- |
-| table | string | 是 | 表格名 |
+| table | string | 是 | 表名 |
 | key | string | 是 |  |
 | value | string/Object | 是 |  |
-| success | function | 否 | 成功回调 |
-| fail | function | 否 | 失败回调 |
-| complete | function | 否 | 完成回调（调用成功、失败都会执行） |
+| callback | function | 是 | 回调 |
 
-**fail 返回参数说明**
+
+**callback 返回参数说明**
 
 | 参数 | 类型 | 说明 |
 | ---- | ---- | ---- |
-| errCode | Number | 错误码 |
+| error | Object | 错误信息 |
 
-## krn.storage.getStorage(Object obj)
+## KRNStorage.get(table, key, callback)
 
 **参数说明**
 
 | 参数 | 类型 | 必填 | 说明
 | ---- | ---- | ---- | ---- |
-| table | string | 是 | 表格名 |
+| table | string | 是 | 表名 |
 | key | string | 是 |  |
-| success | function | 否 | 成功回调 |
-| fail | function | 否 | 失败回调 |
-| complete | function | 否 | 完成回调（调用成功、失败都会执行） |
+| callback | function | 是 | 回调 |
 
-**success 返回参数说明**
 
-| 参数 | 类型 | 说明 |
-| ---- | ---- | ---- |
-| data | Object/string | key 对应的内容 |
-
-**fail 返回参数说明**
+**callback 返回参数说明**
 
 | 参数 | 类型 | 说明 |
 | ---- | ---- | ---- |
-| errCode | Number | 错误码 |
+| error | Object | 错误信息 |
+| value | String/Object | 页面返回的数据，具体类型需要业务约定 |
 
-## krn.storage.removeStorage(Object obj)
+## KRNStorage.remove(table, key, callback)
 
 **参数说明**
 
 | 参数 | 类型 | 必填 | 说明
 | ---- | ---- | ---- | ---- |
-| table | string | 是 | 表格名 |
+| table | string | 是 | 表名 |
 | key | string | 是 |  |
-| success | function | 否 | 成功回调 |
-| fail | function | 否 | 失败回调 |
-| complete | function | 否 | 完成回调（调用成功、失败都会执行） |
+| callback | function | 是 | 回调 |
 
-**fail 返回参数说明**
+**callback 返回参数说明**
 
 | 参数 | 类型 | 说明 |
 | ---- | ---- | ---- |
-| errCode | Number | 错误码 |
+| error | Object | 错误信息 |
 
 
-## krn.storage.clearStorage(Object obj)
+## KRNStorage.clear(table, callback)
 
 **参数说明**
 
 | 参数 | 类型 | 必填 | 说明
 | ---- | ---- | ---- | ---- |
-| table | string | 是 | 表格名 |
-| success | function | 否 | 成功回调 |
-| fail | function | 否 | 失败回调 |
-| complete | function | 否 | 完成回调（调用成功、失败都会执行） |
+| table | string | 是 | 表名 |
+| callback | function | 是 | 回调 |
 
-**fail 返回参数说明**
+**callback 返回参数说明**
 
 | 参数 | 类型 | 说明 |
 | ---- | ---- | ---- |
-| errCode | Number | 错误码 |
+| error | Object | 错误信息 |
+
 
 
 附：H5 对应的 JSAPI
