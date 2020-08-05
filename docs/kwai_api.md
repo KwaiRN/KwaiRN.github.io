@@ -113,9 +113,32 @@ NativeModules.Kwaiying.report(key: string, params: string, callback: function);
 安装方法
 
 ```sh
-npm install @krn/weblogger
+yarn add @krn/weblogger
+yarn add @krn/bootstrap
+
+// 在index.js入口第一行添加
+import '@krn/bootstrap';
+
+// 在其他地方初始化weblogger
 import {RNWeblog} from '@krn/weblogger/dist/log.bridge.common.js';
-import './KRNBootstrap';	// index.js 入口 
+const weblog = new RNWeblog(
+    {},
+    {
+        // baseOptions - 埋点公参配置，和埋点参数更加相关
+        service_name: 'josh_service',
+        sub_biz: 'josh_biz',
+        need_encrypt: true,
+        h5_extra_attr: { joshtest: 'joshtest' },
+    },
+);
+
+// 具体类型和参数见https://component.corp.kuaishou.com/docs/weblogger/document/api.html
+        weblog.send('SHOW', {
+            action: 'lab_page_show',
+            params: {
+                show: true,
+            },
+        });
 ```
 
 接口与官网一致。不支持插件
