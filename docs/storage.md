@@ -23,6 +23,15 @@ title: 数据存储
 | ---- | ---- | ---- |
 | error | Object | 错误信息 |
 
+
+```js
+NativeModules.KRNStorage.set('table', 'key', 'value', (err) => {
+	if (err) {
+		console.error(err)
+	}
+})
+```
+
 ## KRNStorage.get(table, key, callback)
 
 **参数说明**
@@ -41,6 +50,16 @@ title: 数据存储
 | error | Object | 错误信息 |
 | value | String/Object | 页面返回的数据，具体类型需要业务约定 |
 
+```js
+NativeModules.KRNStorage.get('table', 'key', (err, value) => {
+	if (err) {
+		console.error(err)
+	} else {
+		console.log(value)
+	}
+})
+```
+
 ## KRNStorage.remove(table, key, callback)
 
 **参数说明**
@@ -58,6 +77,15 @@ title: 数据存储
 | error | Object | 错误信息 |
 
 
+```js
+NativeModules.KRNStorage.remove('table', 'key', (err) => {
+	if (err) {
+		console.error(err)
+	}
+})
+```
+
+
 ## KRNStorage.clear(table, callback)
 
 **参数说明**
@@ -73,6 +101,13 @@ title: 数据存储
 | ---- | ---- | ---- |
 | error | Object | 错误信息 |
 
+```js
+NativeModules.KRNStorage.clear('table', (err) => {
+	if (err) {
+		console.error(err)
+	}
+})
+```
 
 
 附：H5 对应的 JSAPI
