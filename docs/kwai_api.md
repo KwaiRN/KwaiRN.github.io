@@ -69,10 +69,10 @@ const weblog = new RNWeblog(
     {},
     {
         // baseOptions - 埋点公参配置，和埋点参数更加相关
-        service_name: 'josh_service',
-        sub_biz: 'josh_biz',
+        service_name: 'popular_service',
+        sub_biz: 'popular_biz',
         need_encrypt: true,
-        h5_extra_attr: { joshtest: 'joshtest' },
+        h5_extra_attr: { popular: true },
     },
 );
 
