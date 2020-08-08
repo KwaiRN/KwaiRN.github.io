@@ -34,6 +34,9 @@ Toast 组件
 圆形进度条
 > ios和android的borderWidth大小不一致
 
+### react-native-smooth-pull-to-refresh
+下拉刷新，纯JS组件，性能没有native好，但ios与android均支持下拉loading样式设置。
+
 ## Native 组件
 引入 Native 组件列表会增大安装包大小，因此需要谨慎添加，请确保你要新增的 Native 组件的功能不会与以下已有的组件重复
 
@@ -89,10 +92,5 @@ Toast 组件
 ### react-native-blur
 遮罩、蒙版效果
 > ios 建议使用shouldRasterizeIOS复用位图，否则滑动时，会出现闪烁问题
-
-### react-native-smooth-pull-to-refresh
-下拉刷新，纯JS组件，性能没有native好，但ios与android均支持下拉loading样式设置。
-
-
 
 [iOS 最新的实时组件列表请参见这里](http://git.corp.kuaishou.com/chenying09/kwai_react_native_ios/-/tree/master/release_libraries)
