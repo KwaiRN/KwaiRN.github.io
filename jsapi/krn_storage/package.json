@@ -27,6 +27,7 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
+    "docs": "npx typedoc --plugin typedoc-plugin-markdown --out ./docs ./src",
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
@@ -34,8 +35,7 @@
     "ios",
     "android"
   ],
-  "repository": "http://",
-  "author": "liubojie <liubojie@kuaishou.com> (http://)",
+  "author": "krn <liubojie@kuaishou.com> (http://)",
   "license": "MIT",
   "bugs": {
     "url": "http:///issues"
@@ -60,6 +60,8 @@
     "react": "16.11.0",
     "react-native": "0.62.2",
     "release-it": "^13.5.8",
+    "typedoc": "^0.18.0",
+    "typedoc-plugin-markdown": "^2.4.0",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
@@ -130,6 +132,6 @@
   "@react-native-community/bob": {
     "source": "src",
     "output": "lib",
-    "targets": ["commonjs", "module", "typescript"]
+    "targets": ["typescript"]
   }
 }
