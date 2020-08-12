@@ -27,7 +27,7 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
-    "docs": "npx typedoc --plugin typedoc-plugin-markdown --out ./docs ./src",
+    "docs": "rm -rf ./docs/gen/ && npx typedoc --plugin typedoc-plugin-markdown --theme markdown --hideBreadcrumbs --hideSources --out ./docs/gen/ ./src/index.ts && cp ../template.md ./docs/gen/ && npx template-file docs/config.json docs/gen/template.md docs/gen/ && cat docs/gen/modules/_src_index_.md >> docs/gen/template.md",
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
@@ -60,6 +60,7 @@
     "react": "16.11.0",
     "react-native": "0.62.2",
     "release-it": "^13.5.8",
+    "template-file": "^3.1.0",
     "typedoc": "^0.18.0",
     "typedoc-plugin-markdown": "^2.4.0",
     "typescript": "^3.8.3"
@@ -121,7 +122,10 @@
       ]
     }
   },
-  "eslintIgnore": ["node_modules/", "lib/"],
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": true,
@@ -132,6 +136,8 @@
   "@react-native-community/bob": {
     "source": "src",
     "output": "lib",
-    "targets": ["typescript"]
+    "targets": [
+      "typescript"
+    ]
   }
 }
