@@ -27,7 +27,7 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
-    "docs": "rm -rf ./docs/gen/ && npx typedoc --plugin typedoc-plugin-markdown --theme markdown --hideBreadcrumbs --hideSources --out ./docs/gen/ ./src/index.ts && cp ../template.md ./docs/gen/ && npx template-file docs/config.json docs/gen/template.md docs/gen/ && cat docs/gen/modules/_src_index_.md >> docs/gen/template.md",    "bootstrap": "yarn example && yarn && yarn pods"
+    "docs": "rm -rf ./docs/gen/ && npx typedoc --ignoreCompilerErrors --json ./docs/gen/data.json --plugin typedoc-plugin-markdown --theme markdown --hideBreadcrumbs --hideSources --out ./docs/gen/ ./src/index.ts && cp ../template.md ./docs/gen/ && npx template-file docs/config.json docs/gen/template.md docs/gen/ && cat docs/gen/modules/_src_index_.md >> docs/gen/template.md",    "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
     "react-native",

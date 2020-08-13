@@ -1,3 +1,37 @@
+/**
+ * WebLogger使用说明
+ *
+ * ```typescript
+ * yarn add @krn/weblogger
+ * yarn add @krn/bootstrap
+ *
+ * // 在index.js入口第一行添加
+ * import '@krn/bootstrap';
+ *
+ * // 在其他地方初始化weblogger
+ * import {RNWeblog} from '@krn/weblogger/dist/log.bridge.common.js';
+ * const weblog = new RNWeblog(
+ *     {},
+ *     {
+ *         // baseOptions - 埋点公参配置，和埋点参数更加相关
+ *         service_name: 'popular_service',
+ *         sub_biz: 'popular_biz',
+ *         need_encrypt: true,
+ *         h5_extra_attr: { popular: true },
+ *     },
+ * );
+ *
+ * // 具体类型和参数见https://component.corp.kuaishou.com/docs/weblogger/document/api.html
+ *         weblog.send('SHOW', {
+ *             action: 'lab_page_show',
+ *             params: {
+ *                 show: true,
+ *             },
+ *         });
+ * ```
+ *
+ * @packageDocumentation
+ */
 import { NativeModules } from 'react-native';
 
 /**
@@ -70,7 +104,12 @@ export function getEnv(
  * 获取cookie，注意：用户没登录，则 userId/passToken/ky.api_st 不存在
  * @param  {(info:CommonCookie)=>void} success
  * @param  {(errCode:Number)=>void} fail
- * @returns void
+ * @param  {string} did 设备ID
+ * @param  {string} sid ky.api
+ * @param  {string} userId 登录后的用户 ID
+ * @param  {string} ky.api_st	后台api token
+ * @param  {string} sys 系统版本
+ * @param  {string} passToken 登录token
  */
 export function getCommonCookies(
   success: (info: CommonCookie) => void,
