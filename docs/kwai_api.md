@@ -114,9 +114,14 @@ NativeModules.Kwaiying.getEnv((mode) => {
 })
 ```
 
-mode: 0 表示测试环境；1 表示预发布环境；2 表示正式环境
+返回值参数说明
 
-如果是 release 版本的 App，则直接返回 2
+|  参数   | 类型 | 说明 |
+|  ----  | ----  | ---- |
+| url  | string | 服务器地址 |
+| type  | int | 0：测试环境；1：预发布环境；2：Release |
+| useDirect  | bool | 【定向请求】的开关，header里增加一个“direct”字段，主要是用于服务端线上转发，拿到的请求如果携带这个header那么就定向转发到配置好的某一个机器上去，线上环境就可以方便debug了 |
+
 
 
 ## 参考资料
