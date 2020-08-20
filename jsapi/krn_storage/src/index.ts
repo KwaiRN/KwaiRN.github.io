@@ -15,18 +15,19 @@ export function set(
   success: () => void,
   fail: (err: KRNError) => void
 ): void {
-  NativeModules.KRNStorage.set(
-    table,
-    key,
-    value,
-    (err: KRNError | null) => {
+  if (hasKVStorage()) {
+    NativeModules.KVStorage.set(table, key, value, (json: string) => {
+      success();
+    });
+  } else {
+    NativeModules.KRNStorage.set(table, key, value, (err: KRNError | null) => {
       if (err) {
         fail(err);
       } else {
         success();
       }
-    }
-  );
+    });
+  }
 }
 /**
  * @param  {string} table 表名
@@ -41,17 +42,28 @@ export function get(
   success: (data: string) => void,
   fail: (err: KRNError) => void
 ): void {
-  NativeModules.KRNStorage.get(
-    table,
-    key,
-    (err: KRNError | null, data: string) => {
-      if (err) {
-        fail(err);
+  if (hasKVStorage()) {
+    NativeModules.KVStorage.getString(table, key, (json: string) => {
+      let result = JSON.parse(json);
+      if (!result || result.errCode) {
+        success('');
       } else {
-        success(data);
+        success(result.result);
       }
-    }
-  );
+    });
+  } else {
+    NativeModules.KRNStorage.get(
+      table,
+      key,
+      (err: KRNError | null, data: string) => {
+        if (err) {
+          fail(err);
+        } else {
+          success(data);
+        }
+      }
+    );
+  }
 }
 /**
  * 删除key
@@ -66,13 +78,19 @@ export function remove(
   success: () => void,
   fail: (err: KRNError) => void
 ): void {
-  NativeModules.KRNStorage.remove(table, key, (err: KRNError | null) => {
-    if (err) {
-      fail(err);
-    } else {
+  if (hasKVStorage()) {
+    NativeModules.KVStorage.remove(table, key, (json: string) => {
       success();
-    }
-  });
+    });
+  } else {
+    NativeModules.KRNStorage.remove(table, key, (err: KRNError | null) => {
+      if (err) {
+        fail(err);
+      } else {
+        success();
+      }
+    });
+  }
 }
 /**
  * 清楚数据库
@@ -85,13 +103,23 @@ export function clear(
   success: () => void,
   fail: (err: KRNError) => void
 ): void {
-  NativeModules.KRNStorage.clear(table, (err: KRNError | null) => {
-    if (err) {
-      fail(err);
-    } else {
+  if (hasKVStorage()) {
+    NativeModules.KVStorage.clear(table, (json: string) => {
       success();
-    }
-  });
+    });
+  } else {
+    NativeModules.KRNStorage.clear(table, (err: KRNError | null) => {
+      if (err) {
+        fail(err);
+      } else {
+        success();
+      }
+    });
+  }
+}
+
+function hasKVStorage(): boolean {
+  return typeof NativeModules.KVStorage !== 'undefined';
 }
 
 export default {

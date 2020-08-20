@@ -11,13 +11,23 @@ export function open(
   success: (data: any) => void,
   fail: (err: any) => void
 ): void {
-  NativeModules.krn.open(url, (err: any | null, data: any) => {
-    if (err) {
-      fail(err);
-    } else {
-      success(data);
-    }
-  });
+  if (hasKwaiying()) {
+    NativeModules.Kwaiying.open(url, (status: any | null, media: any) => {
+      if (status === 1) {
+        success(media);
+      } else {
+        fail(status);
+      }
+    });
+  } else {
+    NativeModules.krn.open(url, (err: any | null, data: any) => {
+      if (err) {
+        fail(err);
+      } else {
+        success(data);
+      }
+    });
+  }
 }
 /**
  * KRN 简版 native 上报
@@ -25,13 +35,29 @@ export function open(
  * @param  {Map<string, any>} params 上报参数
  */
 export function report(action: string, params: Map<string, any>): void {
-  NativeModules.krn.report(action, params);
+  if (hasKwaiying()) {
+    NativeModules.Kwaiying.report(
+      action,
+      JSON.stringify(params || {}),
+      () => {}
+    );
+  } else {
+    NativeModules.krn.report(action, params);
+  }
 }
 /**
  * 退出当前业务的 RN 页面
  */
 export function goBack(): void {
-  NativeModules.krn.goBack();
+  if (hasKwaiying()) {
+    NativeModules.Kwaiying.goBack();
+  } else {
+    NativeModules.krn.goBack();
+  }
+}
+
+function hasKwaiying(): boolean {
+  return typeof NativeModules.Kwaiying !== 'undefined';
 }
 
 export default {
