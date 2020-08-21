@@ -11,7 +11,7 @@ export function open(
   success: (data: any) => void,
   fail: (err: any) => void
 ): void {
-  if (hasKwaiying()) {
+  if (!hasKRN()) {
     NativeModules.Kwaiying.open(url, (status: any | null, media: any) => {
       if (status === 1) {
         success(media);
@@ -35,7 +35,7 @@ export function open(
  * @param  {Map<string, any>} params 上报参数
  */
 export function report(action: string, params: Map<string, any>): void {
-  if (hasKwaiying()) {
+  if (!hasKRN()) {
     NativeModules.Kwaiying.report(
       action,
       JSON.stringify(params || {}),
@@ -49,15 +49,15 @@ export function report(action: string, params: Map<string, any>): void {
  * 退出当前业务的 RN 页面
  */
 export function goBack(): void {
-  if (hasKwaiying()) {
+  if (!hasKRN()) {
     NativeModules.Kwaiying.goBack();
   } else {
     NativeModules.krn.goBack();
   }
 }
 
-function hasKwaiying(): boolean {
-  return typeof NativeModules.Kwaiying !== 'undefined';
+function hasKRN(): boolean {
+  return typeof NativeModules.krn !== 'undefined' && NativeModules.krn !== null;
 }
 
 export default {

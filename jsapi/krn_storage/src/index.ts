@@ -16,7 +16,7 @@ export function set(
   fail: (err: KRNError) => void
 ): void {
   if (hasKVStorage()) {
-    NativeModules.KVStorage.set(table, key, value, (json: string) => {
+    NativeModules.KVStorage.set(table, key, value, () => {
       success();
     });
   } else {
@@ -79,7 +79,7 @@ export function remove(
   fail: (err: KRNError) => void
 ): void {
   if (hasKVStorage()) {
-    NativeModules.KVStorage.remove(table, key, (json: string) => {
+    NativeModules.KVStorage.remove(table, key, () => {
       success();
     });
   } else {
@@ -104,7 +104,7 @@ export function clear(
   fail: (err: KRNError) => void
 ): void {
   if (hasKVStorage()) {
-    NativeModules.KVStorage.clear(table, (json: string) => {
+    NativeModules.KVStorage.clear(table, () => {
       success();
     });
   } else {
@@ -119,7 +119,10 @@ export function clear(
 }
 
 function hasKVStorage(): boolean {
-  return typeof NativeModules.KVStorage !== 'undefined';
+  return (
+    typeof NativeModules.KVStorage !== 'undefined' &&
+    NativeModules.KVStorage !== null
+  );
 }
 
 export default {
