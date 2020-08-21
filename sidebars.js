@@ -8,7 +8,7 @@ module.exports = {
     {
       type: 'category',
       label: 'API',
-      items: ['api', 'kwai_api', 'component', 'jump', 'storage', 'report'],
+      items: ['kwai_api', 'component', 'jump', 'storage', 'report'],
     },
     {
       type: 'category',
