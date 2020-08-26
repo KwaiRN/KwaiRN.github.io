@@ -122,6 +122,56 @@ NativeModules.Kwaiying.getEnv((mode) => {
 | type  | int | 0：测试环境；1：预发布环境；2：正式环境 |
 | useDirect  | bool | 【定向请求】的开关，header里增加一个“direct”字段，主要是用于服务端线上转发，拿到的请求如果携带这个header那么就定向转发到配置好的某一个机器上去，线上环境就可以方便debug了 |
 
+## Kwaiying.login(callback)
+如果未登录，拉起登录页面，登录成功后回调登录信息；如果已登录，则该方法不起任何作用
+
+**参数说明**
+
+| 参数 | 类型 | 必填 | 说明
+| ---- | ---- | ---- | ---- |
+| callback | function | 否 | 回调 |
+
+
+**callback 返回参数说明**
+
+| 参数 | 类型 | 说明 |
+| ---- | ---- | ---- |
+| error | Object | 错误信息 |
+| loginInfo | Object | {"userId":"", "nickName":"", "avatarUrl":"", "token":""} |
+
+```js
+NativeModules.Kwaiying.login((err, loginInfo) => { 
+    if (!err) {
+        console.log(loginInfo)
+    }
+})
+```
+
+
+## Kwaiying.loginInfo(callback)
+获取登录信息，如果未登录则返回空
+
+**参数说明**
+
+| 参数 | 类型 | 必填 | 说明
+| ---- | ---- | ---- | ---- |
+| callback | function | 是 | 回调 |
+
+
+**callback 返回参数说明**
+
+| 参数 | 类型 | 说明 |
+| ---- | ---- | ---- |
+| error | Object | 错误信息 |
+| loginInfo | Object | {"userId":"", "nickName":"", "avatarUrl":"", "token":""} |
+
+```js
+NativeModules.Kwaiying.loginInfo((err, loginInfo) => { 
+    if (!err) {
+        console.log(loginInfo)
+    }
+})
+```
 
 
 ## 参考资料
