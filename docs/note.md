@@ -14,7 +14,7 @@ title: 开发备忘
 
 ```objc
 RCT_EXPORT_METHOD(setNavSwipe:(BOOL)canswipe)
-{
+{ 
     dispatch_async(dispatch_get_main_queue(), ^{
         KYLogI(kKWYReactNativeModuleName, @"setNavSwipe => %@", @(canswipe));
         // 获取当前显示的 navigationController 然后根据 RN 那边传过来的 canswipe 参数决定是否禁止侧滑返回
