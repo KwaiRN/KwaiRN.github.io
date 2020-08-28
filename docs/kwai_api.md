@@ -105,8 +105,9 @@ NativeModules.Kwaiying.setNavSwipe(bool enable);
 ```
 
 ## 获取当前环境配置
+### getEnv
 
-使用该接口，JS 可以根据 Native 的环境配置来请求后台不同的接口
+Native 提供环境模式，JS 根据该值来自主选择不同的 URL，URL 由 JS 定义
 
 ```js
 NativeModules.Kwaiying.getEnv((mode) => { 
@@ -115,6 +116,22 @@ NativeModules.Kwaiying.getEnv((mode) => {
 ```
 
 返回值参数说明
+
+|  参数   | 类型 | 说明 |
+|  ----  | ----  | ---- |
+| mode  | int | 0：测试环境；1：预发布环境；2：正式环境 |
+
+
+### getEnvConfig
+Native 提供 URL 给 JS，JS 不需要关心该 URL 是什么，也不需要关心现在是否是测试环境
+
+```js
+NativeModules.Kwaiying.getEnvConfig((res) => { 
+
+})
+```
+
+返回值 res 参数说明
 
 |  参数   | 类型 | 说明 |
 |  ----  | ----  | ---- |
