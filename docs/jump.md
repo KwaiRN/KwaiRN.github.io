@@ -39,16 +39,5 @@ NativeModules.krn.open(
 )
 ```
 
-H5 跳 KRN
-
-```js
-kwaiying.open(params)
-```
-
-> params = {url : kwaiying://krn?packageName=${启动应用名}&jsbundle=${应用包的地址，完整 url 则拉起 RN 应用}&data=${json 化的启动参数}
-
-> 注意：所有参数必须 encode 之后传入
-
-
 ## krn.goBack()
 退出当前业务的 RN 页面

@@ -108,15 +108,3 @@ NativeModules.KRNStorage.clear('table', (err) => {
 	}
 })
 ```
-
-
-附：H5 对应的 JSAPI
-
-```js
-+ set(table:String, key: String, value: String, callback: String): void
-+ getString(table:String, key: String, callback: String): void
-+ remove(table:String, key:String, callback: String): void
-+ clear(table:String, callback: String): void
-```
-
-> errCode 约定：NO_KEY。不存在 key
