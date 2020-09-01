@@ -2,8 +2,8 @@ module.exports = {
   docs: [
     {
       type: 'category',
-      label: '入门',
-      items: ['start'],
+      label: '文档',
+      items: ['start', 'all'],
     },
     {
       type: 'category',
