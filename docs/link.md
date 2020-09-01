@@ -1,5 +1,5 @@
 ---
-id: all
+id: link
 title: 资源汇总
 ---
 
@@ -7,6 +7,7 @@ title: 资源汇总
 + [KRN 官方文档](https://kwairn.github.io/docs/)
 
 ## 工具
++ [快手中台 KRN 项目](https://mobile.zt.corp.kuaishou.com/apps/center/sdks/KRN)
 + [包管理平台](https://krn-admin.corp.kuaishou.com/#/app)
 + [包管理平台（测试环境）](http://krn-jsbundle-admin.devops.test.gifshow.com/#/project)
 
