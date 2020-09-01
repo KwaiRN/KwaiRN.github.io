@@ -13,7 +13,7 @@ module.exports = {
     {
       type: 'category',
       label: '其他',
-      items: ['vs', 'pratice', 'note'],
+      items: ['pratice', 'note'],
     },
   ]
 };
