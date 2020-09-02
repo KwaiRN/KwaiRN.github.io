@@ -5,6 +5,7 @@ title: 资源汇总
 
 ## 文档
 + [KRN 官方文档](https://kwairn.github.io/docs/)
++ [快手 RN 工程运行指南](https://wiki.corp.kuaishou.com/pages/viewpage.action?pageId=635052847)
 
 ## 工具
 + [快手中台 KRN 项目](https://mobile.zt.corp.kuaishou.com/apps/center/sdks/KRN)
