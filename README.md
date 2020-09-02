@@ -9,7 +9,9 @@ git checkout source
 2. 修改你的文件
 
 
-3. 提交部署
+3. 提交 Git
+
+使用 Git 常规命令提交即可，也可使用以下命令
 
 ```sh
 sh GitPush.sh "Your Commit Message"
