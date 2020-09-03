@@ -30,3 +30,4 @@ title: 资源汇总
 
 + [RN 知识 for 产品经理 & 项目经理 & 测试](https://zhuanlan.zhihu.com/p/102425894)（里面提到的 RN 适用场景不全对，RN 经过这么多年的优化，适用范围更广了，后续研发也会对具体场景做深度优化）
 + [KRN Q&A](https://docs.corp.kuaishou.com/d/home/fcAC5nRsq_k-3x1-QrJPvTwd2)
++ [KRN 用户反馈收集](https://docs.corp.kuaishou.com/s/home/fcAA0liPBGA3YAhR4Oi3NcNgC)
