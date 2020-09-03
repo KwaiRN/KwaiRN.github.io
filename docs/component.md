@@ -94,3 +94,9 @@ Toast 组件
 > ios 建议使用shouldRasterizeIOS复用位图，否则滑动时，会出现闪烁问题
 
 [iOS 最新的实时组件列表请参见这里](http://git.corp.kuaishou.com/chenying09/kwai_react_native_ios/-/tree/master/release_libraries)
+
+### @sentry/react-native
+上报组件
+
+### @react-native-community/audio-toolkit
+音频
