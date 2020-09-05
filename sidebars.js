@@ -3,7 +3,7 @@ module.exports = {
     {
       type: 'category',
       label: '文档',
-      items: ['start', 'link'],
+      items: ['start', 'guide', 'link'],
     },
     {
       type: 'category',
