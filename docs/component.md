@@ -103,22 +103,35 @@ Toast 组件
 
 ### @weblogger
 方案一：
-安装 @krn/bootstrap + @krn/weblogger
-上报位置：app native上报到 ks_client_log_v2
-使用方法：
-在项目入口 引入import '@krn/bootstrap';
-初始化：
-import { RNWeblog } from '@krn/weblogger/dist/log.bridge.common';
-const weblog = new RNWeblog(); // 初始化参数
 
-测试：logger-v2测试平台
+> 安装 @krn/bootstrap + @krn/weblogger
+
+> 上报位置：app native上报到 ks_client_log_v2
+
+> 使用方法：
+
+> 在项目入口 引入import '@krn/bootstrap';
+
+> 初始化：
+
+> import { RNWeblog } from '@krn/weblogger/dist/log.bridge.common';
+
+> const weblog = new RNWeblog(); // 初始化参数
+
+> 测试：logger-v2测试平台
 
 方案二：
-安装@ks/weblogger
-上报位置：http  js上报到 ks_client_log_v3
-使用方法：
-import { Weblog } from '@ks/weblogger/dist/log.core';
-初始化：
-const weblog = new Weblog(); // 初始化参数
 
-测试方法：抓包
+> 安装@ks/weblogger
+
+> 上报位置：http  js上报到 ks_client_log_v3
+
+> 使用方法：
+
+> import { Weblog } from '@ks/weblogger/dist/log.core';
+
+> 初始化：
+
+> const weblog = new Weblog(); // 初始化参数
+
+> 测试方法：抓包
