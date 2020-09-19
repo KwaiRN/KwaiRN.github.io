@@ -56,8 +56,11 @@ Toast 组件
 
 可以考虑放在 stylesheet 中支持，让组件自动包裹 react-native-linear-gradient
 
-### react-native-fs
-文件操作，如：文件读、写、上传、下载、删除等
+### [rn-fetch-blob](https://github.com/joltup/rn-fetch-blob)
+上传、下载文件
+
+### [react-native-fs](https://github.com/itinance/react-native-fs)
+文件操作，如：文件读、写、上传、下载、删除等。跟rn-fetch-blob区别在于本地文件操作效率高，网络相关功能不如rn-fetch-blob。
 > android的上传/下载进度是模拟出来的，且不支持取消上传任务，建议使用`rn-fetch-blob`
 
 > 注意：该三方库有坑，上传视频时会导致内存上涨不释放，已修复，详情点击 [react-native-fs](http://git.corp.kuaishou.com/team-shenzhen/ios/react-native-fs/-/tree/master)
@@ -82,9 +85,6 @@ Toast 组件
 
 ### react-native-reanimated
 动画相关，随 @react-navigation/native 一起引入
-
-### rn-fetch-blob
-上传、下载文件
 
 ### react-native-zip-archive
 压缩与解压缩
