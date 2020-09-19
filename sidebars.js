@@ -8,7 +8,7 @@ module.exports = {
     {
       type: 'category',
       label: 'API',
-      items: ['component', 'jump', 'storage', 'report'],
+      items: ['component', 'jump', 'storage', 'report', 'other'],
     },
     {
       type: 'category',
